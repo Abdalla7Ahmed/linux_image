@@ -2,7 +2,7 @@
 
 The toolchain is the first element of embedded Linux and the starting point of your project.
 You will use it to compile all the code that will run on your device. 
-##required packages:
+## required packages:
 autoconf, automake, bison, bzip2, cmake,
 flex, g++, gawk, gcc, gettext, git, gperf, help2man, libncurses5-
 dev, libstdc++6, libtool, libtool-bin, make, patch, python3-dev,
