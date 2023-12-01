@@ -174,7 +174,7 @@ $ file a.out
 ```
 
 
--![screen1](./images/8.2.png)
+-![screen1](./images/8.3.png)
 
 
 
