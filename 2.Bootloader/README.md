@@ -94,8 +94,81 @@ the Tertiary Program Loader (TPL), introduces a full bootloader like U-Boot. It 
 for tasks such as managing boot and kernel images in flash storage and facilitating kernel loading and booting, both manually and automatically.
 This phase show the jump from SPL in SRAM to TPL in DRAM .As the TPL executes, it loads the kernel into DRAM. 
 At the end of the third phase, there is a kernel in memory, waiting to be started
+
 -![Phases_boot_sequence](./images/2.png)
 
+
+## U-Boot
+### 1.clone u-boot source code
+
+```shell 
+
+$ git clone git://git.denx.de/u-boot.git
+$ cd u-boot
+$ git checkout v2021.01
+
+```
+
+### list the available architecture
+
+```shell 
+
+$ cd configs
+$ ls
+
+```
+
+### search on your board
+
+```shell 
+
+ls  | grep "rpi"
+
+```
+
+-![Phases_boot_sequence](./images/3.1.png)
+
+### 2.building u-boot 
+
+```shell 
+
+$ make rpi_3_defconfig
+$ make CROSS_COMPILE=aarch64-rpi3-linux-gnu-
+
+```
+
+-![Phases_boot_sequence](./images/3.2.png)
+-![Phases_boot_sequence](./images/3.3.png)
+
+## The results of the compilation are as follows:
+• u-boot: U-Boot in ELF object format, suitable for use with a debugger
+• u-boot.map: The symbol table
+• u-boot.bin: U-Boot in raw binary format, suitable for running on your device
+• u-boot.img: This is u-boot.bin with a U-Boot header added, suitable for uploading to a running copy of U-Boot
+• u-boot.srec: U-Boot in Motorola S-record (SRECORD or SRE) format, suitable for transferring over a serial connection
+
+-![Phases_boot_sequence](./images/3.4.png)
+
+## 3.Installing U-boot on top of QEMU Emulator ( TARGET ).
+
+```shell
+
+qemu-system-aarch64 \
+    -M raspi3b \
+    -cpu cortex-a72 \
+    -append "rw earlyprintk loglevel=8 console=ttyAMA0,115200" \
+    -kernel u-boot.bin \
+    -m 1G -smp 4 \
+    -serial stdio \
+    -usb -device usb-mouse -device usb-kbd \
+        -device usb-net,netdev=net0 \
+        -netdev user,id=net0,hostfwd=tcp::5555-:22 \
+
+```
+
+-![Phases_boot_sequence](./images/3.5.png)
+        
+   
 
 
 
