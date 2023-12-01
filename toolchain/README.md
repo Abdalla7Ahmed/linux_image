@@ -165,6 +165,9 @@ $ file a.out
 ```
 
 
+-![screen1](./images/2.png)
+
+
 
 
 
