@@ -2,7 +2,7 @@
 
 The toolchain is the first element of embedded Linux and the starting point of your project.
 You will use it to compile all the code that will run on your device. 
-required packages:fig(1)
+##required packages:
 autoconf, automake, bison, bzip2, cmake,
 flex, g++, gawk, gcc, gettext, git, gperf, help2man, libncurses5-
 dev, libstdc++6, libtool, libtool-bin, make, patch, python3-dev,
@@ -94,7 +94,7 @@ cleans up the Crosstool-NG build directory, removing any previously generated fi
 ### $ bin/ct-ng list-samples :
 Lists the available sample configurations that Crosstool-NG provides.
 -![screen1](./images/6.2.png)
-### $ bin/ct-ng <choose sample> : 
+### $ bin/ct-ng  aarch64-rpi3-linux-gnu : 
 Selects a specific sample configuration from the available options.
 -![screen1](./images/6.4.png)
 ### $ bin/ct-ng show-aarch64-rpi3-linux-gnu : 
