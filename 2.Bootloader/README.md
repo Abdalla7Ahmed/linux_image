@@ -141,11 +141,11 @@ $ make CROSS_COMPILE=aarch64-rpi3-linux-gnu-
 -![Phases_boot_sequence](./images/3.3.png)
 
 ## The results of the compilation are as follows:
-u-boot: U-Boot in ELF object format, suitable for use with a debugger
-u-boot.map: The symbol table
-u-boot.bin: U-Boot in raw binary format, suitable for running on your device
-u-boot.img: This is u-boot.bin with a U-Boot header added, suitable for uploading to a running copy of U-Boot
-u-boot.srec: U-Boot in Motorola S-record (SRECORD or SRE) format, suitable for transferring over a serial connection
+1.u-boot: U-Boot in ELF object format, suitable for use with a debugger.
+2.u-boot.map: The symbol table.
+3.u-boot.bin: U-Boot in raw binary format, suitable for running on your device.
+4.u-boot.img: This is u-boot.bin with a U-Boot header added, suitable for uploading to a running copy of U-Boot.
+5.u-boot.srec: U-Boot in Motorola S-record (SRECORD or SRE) format, suitable for transferring over a serial connection.
 
 -![Phases_boot_sequence](./images/3.4.png)
 
