@@ -53,7 +53,7 @@ Each of the 6 runlevels described above has its own directory:
 #### Run level 5 – /etc/rc5.d/
 #### Run level 6 – /etc/rc6.d/
 
--![PC_boot_sequence](./images/1.3.png)
+![PC_boot_sequence](./images/1.3.png)
 
 
 ## The raspberry pi boot sequence:
@@ -65,11 +65,11 @@ Afterwards, the GPU reads and executes the GPU firmware(start*.elf files).
 4. Start.elf reads kernel.img, config.txt, and cmdline.txt and loads them into memory. The GPU wakes up the ARM CPU.
 5. Kernel is booted up.
 
--![raspberry_pi_boot_sequence](./images/1.1.png)
+![raspberry_pi_boot_sequence](./images/1.1.png)
 
 ## The beaglebone black boot sequence :
 
--![beaglebone_black_boot_sequence](./images/1.2.png)
+![beaglebone_black_boot_sequence](./images/1.2.png)
 
 
 
@@ -95,7 +95,7 @@ for tasks such as managing boot and kernel images in flash storage and facilitat
 This phase show the jump from SPL in SRAM to TPL in DRAM .As the TPL executes, it loads the kernel into DRAM. 
 At the end of the third phase, there is a kernel in memory, waiting to be started
 
--![Phases_boot_sequence](./images/2.png)
+![Phases_boot_sequence](./images/2.png)
 
 
 ## U-Boot
@@ -126,7 +126,7 @@ ls  | grep "rpi"
 
 ```
 
--![Phases_boot_sequence](./images/3.1.png)
+![Phases_boot_sequence](./images/3.1.png)
 
 ### 2.building u-boot 
 
@@ -137,8 +137,8 @@ $ make CROSS_COMPILE=aarch64-rpi3-linux-gnu-
 
 ```
 
--![Phases_boot_sequence](./images/3.2.png)
--![Phases_boot_sequence](./images/3.3.png)
+![Phases_boot_sequence](./images/3.2.png)
+![Phases_boot_sequence](./images/3.3.png)
 
 ## The results of the compilation are as follows:
 ### u-boot: 
@@ -152,7 +152,7 @@ This is u-boot.bin with a U-Boot header added, suitable for uploading to a runni
 ### u-boot.srec: 
 U-Boot in Motorola S-record (SRECORD or SRE) format, suitable for transferring over a serial connection.
 
--![Phases_boot_sequence](./images/3.4.png)
+![Phases_boot_sequence](./images/3.4.png)
 
 ## 3.Installing U-boot on top of QEMU Emulator ( TARGET ).
 
@@ -179,12 +179,12 @@ U-Boot> printenv
 ```
  
 command to print all the variables in u-boot 
--![U_Boot](./images/4.1.png)
+![U_Boot](./images/4.1.png)
 ```shell
 U-Boot> setenv 
 ```
 set variables 
--![U_Boot](./images/4.2.png)
+![U_Boot](./images/4.2.png)
 ```shell
 U-Boot> help 
 ```
@@ -197,13 +197,13 @@ there are two variables (kernel_addr_r kernel address , fdt_addr_r device tree a
 U-Boot> printenv $kernel_addr_r
 U-Boot> md $kernel_addr_r
 ```
--![U_Boot](./images/4.3.png)
+![U_Boot](./images/4.3.png)
 
 ```shell
 U-Boot> printenv $fdt_addr_r
 U-Boot> md fdt_addr
 ```
--![U_Boot](./images/4.4.png)
+![U_Boot](./images/4.4.png)
 
 
         
