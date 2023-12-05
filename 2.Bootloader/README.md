@@ -172,6 +172,40 @@ qemu-system-aarch64 \
 ```
 
 -![Phases_boot_sequence](./images/3.5.png)
+
+u-boot consist of (variables and commands )
+```shell
+U-Boot> printenv
+```
+ 
+command to print all the variables in u-boot 
+-![U_Boot](./images/4.1.png)
+```shell
+U-Boot> setenv 
+```
+set variables 
+-![U_Boot](./images/4.2.png)
+```shell
+U-Boot> help 
+```
+display all the commands
+```shell
+U-Boot> help md 
+```
+there are two variables (kernel_addr_r kernel address , fdt_addr_r device tree address)
+```shell
+U-Boot> printenv $kernel_addr_r
+U-Boot> md $kernel_addr_r
+```
+-![U_Boot](./images/4.3.png)
+
+```shell
+U-Boot> printenv $fdt_addr_r
+U-Boot> md fdt_addr
+```
+-![U_Boot](./images/4.4.png)
+
+
         
    
 
