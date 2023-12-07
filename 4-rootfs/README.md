@@ -199,7 +199,7 @@ archives the contents of the current directory into a initramfs.cpio file in the
 ```shell 
 # gzip initramfs.cpio
 ```
-compress the initramfs.cpio file using gzip  , resulting in a compressed file named initramfs.cpio.gz.
+compress the initramfs.cpio file using gzip , resulting in a compressed file named initramfs.cpio.gz.
 
 
 ![screen](./images/4.2.png)
