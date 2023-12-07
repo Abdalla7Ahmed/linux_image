@@ -176,7 +176,7 @@ int main(void)
         return 0;
 }
 ```
-### copile the c++ app by using aarch64-rpi3-linux-gnu-g++ croos compiler 
+### compile the c++ app by using aarch64-rpi3-linux-gnu-g++ croos compiler 
 
 ```shell
 $ sudo -i
