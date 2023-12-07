@@ -177,6 +177,15 @@ $ file a.out
 -![screen1](./images/8.3.png)
 
 
+### how to know all the dynamic libraries used by the app 
+
+```shell
+
+aarch64-rpi3-linux-gnu-readelf --all a.out | grep "Shared"
+
+```
+-![screen1](./images/8.4.png)
+
 
 
 
