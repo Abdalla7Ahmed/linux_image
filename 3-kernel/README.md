@@ -7,7 +7,7 @@ The kernel is responsible for managing resources and interfacing with hardware,
 The kernel has three main jobs: to manage resources, to interface with hardware, and
 to provide an API that offers a useful level of abstraction to user space programs.
 
-![screen](./images/1.1.png)
+![screen](./images/1.png)
 
 Applications running in user space run at a low CPU privilege level. They can do very
 little other than make library calls. The primary interface between the user space and the
@@ -132,7 +132,7 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-rpi3-linux-gnu-  Image modules dtbs
 ```
 ![screen](./images/4.png)
  
-### Installing U-boot on top of QEMU Emulator ( TARGET ).
+### Booting Kernel on qemu 
 ```shell
 qemu-system-aarch64 -M virt -cpu cortex-a53 -m 1G -kernel Image  -append "console=ttyAMA0"  -nographic
 ```
