@@ -139,6 +139,6 @@ qemu-system-aarch64 -M virt -cpu cortex-a53 -m 1G -kernel Image  -append "consol
 ![screen](./images/5.1.png)
 ![screen](./images/5.2.png)
  
-## note that kernel painc , no file system to nount it 
+## note that kernel painc , no file system to mount it 
 
 
